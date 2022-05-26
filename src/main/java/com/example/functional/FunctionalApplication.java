@@ -49,14 +49,14 @@ public class FunctionalApplication {
 		//2: Get restaurants that have as cuisine 'American'
 		//----------------------------------------------------------------------------
 		//First we define the condition to use on filter
-/*		Predicate<Document> isAmerica = (data) -> data.get("cuisine").toString().equals("American");
+		Predicate<Document> isAmerica = (data) -> data.get("cuisine").toString().equals("American");
 		//Second we define a function that will received the 'database' and will return a Stream of documents
 		Function<ArrayList<Document>,Stream<Document>> cuisineAmerican = (dbRest) -> dbRest.stream()
 				.filter(r -> isAmerica.test(r));
 		//Finally show the result
 		Consumer<Stream<Document>> resultF2 = (value) -> value.forEach(r -> System.out.println( r.get("name")+"------------"+r.get("cuisine")));
 		System.out.println("Filter #2");
-		resultF2.accept(cuisineAmerican.apply(dataRestaurants));*/
+		resultF2.accept(cuisineAmerican.apply(dataRestaurants));
 
 		//TO DO
 		/*3: Get the amount of restaurants whose name is just one word
